@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amr Ahmed — Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="logo" onclick="showPage('portfolio')">&lt;AA /&gt;</div>
+  <div class="nav-links">
+    <a onclick="showPage('portfolio');smoothScroll('projects')">Projects</a>
+    <a onclick="showPage('portfolio');smoothScroll('skills')">Skills</a>
+    <a onclick="showPage('portfolio');smoothScroll('terminal')">Terminal</a>
+    <a onclick="showPage('portfolio');smoothScroll('chat')">AI Chat</a>
+    <a class="btn-cv" onclick="showPage('cv')">CV ↗</a>
+  </div>
+</nav>
+
+<!-- ══════════════ PORTFOLIO PAGE ══════════════ -->
+<div id="portfolio-page" class="page active">
+
+  <!-- HERO -->
+  <div class="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-grid hero-content" style="width:100%;max-width:1100px;margin:0 auto">
+      <div>
+        <div class="hero-tag">Available for opportunities</div>
+        <h1>Amr<br><span>Ahmed</span></h1>
+        <p class="hero-desc">
+          // Data Scientist &amp; ML Engineer<br>
+          // CS Graduate · Arab Open University<br>
+          // Building intelligent systems · Cairo, Egypt 🇪🇬
+        </p>
+        <div class="hero-btns">
+          <a class="btn btn-primary" href="https://github.com/Amr-Ahmed9/RiskGuard-AI" target="_blank">View RiskGuard AI ↗</a>
+          <a class="btn btn-secondary" href="https://github.com/Amr-Ahmed9" target="_blank">GitHub</a>
+          <button class="btn btn-secondary" onclick="showPage('cv')">View CV</button>
+        </div>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card"><div class="stat-num" id="s1">0</div><div class="stat-label">Projects Built</div></div>
+        <div class="stat-card"><div class="stat-num" id="s2">0</div><div class="stat-label">ML Models</div></div>
+        <div class="stat-card"><div class="stat-num" id="s3">0</div><div class="stat-label">Lines of Code</div></div>
+        <div class="stat-card"><div class="stat-num" id="s4">0+</div><div class="stat-label">KPIs Tracked</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXPERIENCE -->
+  <section id="experience" class="fade-in">
+    <div class="section-header">
+      <div class="section-tag">// 01 — Work History</div>
+      <h2>Experience</h2>
+    </div>
+    <div class="exp-card">
+      <div class="exp-header">
+        <div>
+          <div class="exp-title">Performance Specialist</div>
+          <div class="exp-company">MNT-Halan · Cairo, Egypt</div>
+        </div>
+        <div class="exp-date">June 2024 – Present</div>
+      </div>
+      <ul class="exp-bullets">
+        <li>Collect, clean, and analyze operational datasets to measure KPIs and identify performance trends.</li>
+        <li>Design and maintain dashboards for department heads consolidating multi-source data into structured reports.</li>
+        <li>Assist in quarterly strategic plans including resource allocation models and goal-setting frameworks.</li>
+        <li>Conduct benchmarking research comparing company metrics against industry standards.</li>
+        <li>Standardized data collection templates and reporting workflows — reduced manual effort significantly.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="fade-in">
+    <div class="section-header">
+      <div class="section-tag">// 02 — Selected Work</div>
+      <h2>Projects</h2>
+    </div>
+    <div class="projects-grid">
+
+      <div class="project-card featured">
+        <div class="featured-badge">★ CAPSTONE</div>
+        <div class="project-icon" style="background:rgba(124,58,237,.15);color:#a78bfa">🛡️</div>
+        <div class="project-title">RiskGuard AI</div>
+        <div class="project-desc">AI-powered financial risk management and forecasting web app — Arab Open University capstone, 2024–2025.</div>
+        <ul class="project-bullets">
+          <li>End-to-end ETL pipeline: ingestion, cleaning, feature engineering, model scoring</li>
+          <li>Regression &amp; time-series forecasting with Scikit-learn — cross-validation &amp; hyperparameter tuning</li>
+          <li>Interactive dashboards in Django for non-technical stakeholders</li>
+          <li>Full version control, branching &amp; documentation on GitHub</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Python</span><span class="tag">Django</span><span class="tag">Scikit-learn</span>
+          <span class="tag">Pandas</span><span class="tag">SQLite</span><span class="tag">Git</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon" style="background:rgba(59,130,246,.1);color:#3b82f6">🗄️</div>
+        <div class="project-title">Customer Segmentation Analysis</div>
+        <div class="project-desc">SQL-driven RFM segmentation on a public e-commerce dataset, 2024.</div>
+        <ul class="project-bullets">
+          <li>Queried 500+ customers with SQL — computed RFM scores using percentile logic</li>
+          <li>Cleaned data: resolved missing values, duplicates, inconsistent formats</li>
+          <li>Visualized in Power BI (treemap + scatter) with targeted insight summaries</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">Power BI</span><span class="tag">RFM</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="project-icon" style="background:rgba(0,229,255,.1);color:#00e5ff">📊</div>
+        <div class="project-title">KPI &amp; Reporting Automation</div>
+        <div class="project-desc">Multi-source data consolidation and dynamic dashboards for stakeholder reporting, 2024–Present.</div>
+        <ul class="project-bullets">
+          <li>Automated ETL with Excel Power Query — eliminated manual consolidation steps</li>
+          <li>Built pivot dashboards, KPI scorecards, slicers, and conditional formatting</li>
+          <li>EDA on financial/operational datasets with plain-language insight summaries</li>
+        </ul>
+        <div class="project-tags">
+          <span class="tag">Excel</span><span class="tag">Power Query</span><span class="tag">Power BI</span>
+          <span class="tag">Python</span><span class="tag">SQL</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="wip-badge">🔧 IN PROGRESS</div>
+        <div class="project-icon" style="background:rgba(245,158,11,.1);color:#f59e0b">🎯</div>
+        <div class="project-title">Customer Churn Prediction</div>
+        <div class="project-desc">Binary classification model with a Power BI dashboard for churn drivers.</div>
+        <div class="project-tags">
+          <span class="tag">Python</span><span class="tag">Scikit-learn</span><span class="tag">Power BI</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="wip-badge">🔧 IN PROGRESS</div>
+        <div class="project-icon" style="background:rgba(16,185,129,.1);color:#10b981">📈</div>
+        <div class="project-title">SQL Sales Analytics</div>
+        <div class="project-desc">20+ business queries on a retail dataset — joins, CTEs, window functions, structured report.</div>
+        <div class="project-tags">
+          <span class="tag">SQL</span><span class="tag">CTEs</span><span class="tag">Window Functions</span>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <div class="wip-badge">🔧 IN PROGRESS</div>
+        <div class="project-icon" style="background:rgba(124,58,237,.1);color:#a78bfa">💹</div>
+        <div class="project-title">Financial KPI Dashboard</div>
+        <div class="project-desc">Multi-page Power BI report with DAX measures, drill-throughs, and star schema modeling.</div>
+        <div class="project-tags">
+          <span class="tag">Power BI</span><span class="tag">DAX</span><span class="tag">Star Schema</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="fade-in">
+    <div class="section-header">
+      <div class="section-tag">// 03 — Technical Stack</div>
+      <h2>Skills</h2>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">Python</span><span class="skill-pct">88%</span></div><div class="skill-bar"><div class="skill-fill" data-w="88" style="width:0%;background:linear-gradient(90deg,#00e5ff,#7c3aed)"></div></div></div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">SQL</span><span class="skill-pct">85%</span></div><div class="skill-bar"><div class="skill-fill" data-w="85" style="width:0%;background:linear-gradient(90deg,#3b82f6,#00e5ff)"></div></div></div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">Machine Learning</span><span class="skill-pct">78%</span></div><div class="skill-bar"><div class="skill-fill" data-w="78" style="width:0%;background:linear-gradient(90deg,#7c3aed,#f59e0b)"></div></div></div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">Excel / Power Query</span><span class="skill-pct">90%</span></div><div class="skill-bar"><div class="skill-fill" data-w="90" style="width:0%;background:linear-gradient(90deg,#10b981,#00e5ff)"></div></div></div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">Power BI / DAX</span><span class="skill-pct">80%</span></div><div class="skill-bar"><div class="skill-fill" data-w="80" style="width:0%;background:linear-gradient(90deg,#f59e0b,#ef4444)"></div></div></div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">Django</span><span class="skill-pct">72%</span></div><div class="skill-bar"><div class="skill-fill" data-w="72" style="width:0%;background:linear-gradient(90deg,#10b981,#7c3aed)"></div></div></div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">Git &amp; GitHub</span><span class="skill-pct">75%</span></div><div class="skill-bar"><div class="skill-fill" data-w="75" style="width:0%;background:linear-gradient(90deg,#00e5ff,#10b981)"></div></div></div>
+      <div class="skill-item"><div class="skill-header"><span class="skill-name">Data Analysis / EDA</span><span class="skill-pct">87%</span></div><div class="skill-bar"><div class="skill-fill" data-w="87" style="width:0%;background:linear-gradient(90deg,#f59e0b,#7c3aed)"></div></div></div>
+    </div>
+  </section>
+
+  <!-- TERMINAL -->
+  <section id="terminal" class="fade-in">
+    <div class="section-header">
+      <div class="section-tag">// 04 — Interactive Terminal</div>
+      <h2>Terminal</h2>
+    </div>
+    <div class="terminal">
+      <div class="terminal-header">
+        <div class="dot dot-red"></div>
+        <div class="dot dot-yellow"></div>
+        <div class="dot dot-green"></div>
+        <span class="terminal-title">amr@portfolio:~$</span>
+      </div>
+      <div class="terminal-body">
+        <div id="terminal-output"></div>
+        <div class="terminal-input-row">
+          <span class="term-prompt">amr@portfolio:~$&nbsp;</span>
+          <input id="term-input" type="text" placeholder="type a command..." autocomplete="off" spellcheck="false">
+        </div>
+      </div>
+      <div class="term-suggestions">
+        <span class="term-hint" onclick="runCmd('whoami')">whoami</span>
+        <span class="term-hint" onclick="runCmd('ls projects')">ls projects</span>
+        <span class="term-hint" onclick="runCmd('cat skills.txt')">cat skills.txt</span>
+        <span class="term-hint" onclick="runCmd('git log')">git log</span>
+        <span class="term-hint" onclick="runCmd('python --version')">python --version</span>
+        <span class="term-hint" onclick="runCmd('cat certifications.txt')">cat certifications.txt</span>
+        <span class="term-hint" onclick="runCmd('contact')">contact</span>
+        <span class="term-hint" onclick="runCmd('clear')">clear</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHAT -->
+  <section id="chat" class="fade-in">
+    <div class="section-header">
+      <div class="section-tag">// 05 — AI Assistant</div>
+      <h2>Ask About Amr</h2>
+    </div>
+    <div class="chat-container">
+      <div class="chat-header">
+        <div class="chat-avatar">AA</div>
+        <div class="chat-info">
+          <div class="chat-name">Amr's AI Assistant</div>
+          <div class="chat-status">Online · Powered by Claude</div>
+        </div>
+      </div>
+      <div class="chat-messages" id="chat-messages">
+        <div class="msg bot">
+          <div class="msg-icon bot-icon">AI</div>
+          <div class="msg-bubble">Hey! 👋 I'm Amr's AI assistant. Ask me about his projects, skills, experience at MNT-Halan, or career goals. What would you like to know?</div>
+        </div>
+      </div>
+      <div class="chat-suggestions">
+        <span class="chat-chip" onclick="sendChat('Tell me about RiskGuard AI')">RiskGuard AI</span>
+        <span class="chat-chip" onclick="sendChat('What is his experience at MNT-Halan?')">MNT-Halan role</span>
+        <span class="chat-chip" onclick="sendChat('What are his strongest technical skills?')">Top skills</span>
+        <span class="chat-chip" onclick="sendChat('Is he open to work?')">Open to work?</span>
+      </div>
+      <div class="chat-input-row">
+        <input id="chat-input" type="text" placeholder="Ask anything about Amr..." />
+        <button id="chat-send" onclick="handleChat()">Send →</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="https://github.com/Amr-Ahmed9" target="_blank">GitHub</a>
+      <a href="https://github.com/Amr-Ahmed9/RiskGuard-AI" target="_blank">RiskGuard AI</a>
+      <a href="mailto:aamr7057@gmail.com">aamr7057@gmail.com</a>
+    </div>
+    <div class="footer-copy">// Amr Ahmed Shehata © 2025 · Cairo, Egypt</div>
+  </footer>
+
+</div><!-- end portfolio-page -->
+
+
+<!-- ══════════════ CV PAGE ══════════════ -->
+<div id="cv-page" class="page">
+
+  <div style="max-width:900px;margin:0 auto;padding:1rem 3rem 0">
+    <button class="btn-back" onclick="showPage('portfolio')">← Back to Portfolio</button>
+  </div>
+
+  <div class="cv-hero">
+    <div>
+      <div class="cv-name">Amr Ahmed <span>Shehata</span></div>
+      <div style="font-family:'Space Mono',monospace;font-size:.78rem;color:#64748b;margin-top:.5rem">Data Scientist · ML Engineer · BI Developer</div>
+    </div>
+    <div class="cv-contact">
+      <span>📍 Cairo, Egypt</span>
+      <a href="mailto:aamr7057@gmail.com">aamr7057@gmail.com</a>
+      <span>📞 01155362488</span>
+      <a href="https://github.com/Amr-Ahmed9" target="_blank">github.com/Amr-Ahmed9</a>
+    </div>
+  </div>
+
+  <div class="cv-body">
+
+    <!-- MAIN COLUMN -->
+    <div class="cv-main">
+
+      <div class="cv-section">
+        <div class="cv-section-title">Professional Summary</div>
+        <p class="cv-summary">Computer Science graduate with hands-on experience in data analysis, ETL pipelines, and BI reporting. Proficient in Excel (Power Query, Pivot Tables), Power BI (DAX, data modeling), SQL, and Python (Pandas, Scikit-learn). Built an end-to-end AI-powered forecasting application as a capstone project. Seeking a Data Analyst or junior ML/BI role to apply and grow these skills.</p>
+      </div>
+
+      <div class="cv-section">
+        <div class="cv-section-title">Experience</div>
+        <div class="cv-exp-item">
+          <div class="cv-exp-header">
+            <div class="cv-exp-role">Performance Specialist</div>
+            <div class="cv-exp-date">June 2024 – Present</div>
+          </div>
+          <div class="cv-exp-company">MNT-Halan · Cairo, Egypt</div>
+          <ul class="cv-bullets">
+            <li>Collect, clean, and analyze operational datasets to measure performance against strategic KPIs and identify trends.</li>
+            <li>Design and maintain performance dashboards for department heads, consolidating data from multiple sources.</li>
+            <li>Assist in quarterly strategic plans including resource allocation models and goal-setting frameworks.</li>
+            <li>Conduct benchmarking research comparing company metrics against industry standards.</li>
+            <li>Standardized data collection templates and reporting workflows — improved consistency and reduced manual effort.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="cv-section">
+        <div class="cv-section-title">Projects</div>
+
+        <div class="cv-proj-item">
+          <div class="cv-proj-name">RiskGuard AI — Capstone Project</div>
+          <div class="cv-proj-date">Arab Open University · 2024–2025 · <a href="https://github.com/Amr-Ahmed9/RiskGuard-AI" target="_blank" style="color:#00e5ff;text-decoration:none">github.com/Amr-Ahmed9/RiskGuard-AI</a></div>
+          <div class="cv-proj-desc">AI-powered financial risk management and forecasting web application built with Django.</div>
+          <ul class="cv-bullets">
+            <li>Built end-to-end ETL pipeline: ingestion, cleaning, feature engineering, model scoring.</li>
+            <li>Applied regression and time-series forecasting with Scikit-learn; improved accuracy via cross-validation and hyperparameter tuning.</li>
+            <li>Developed interactive dashboards in Django for non-technical users.</li>
+            <li>Managed version control, branching, and documentation on GitHub.</li>
+          </ul>
+          <div class="project-tags" style="margin-top:.5rem">
+            <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">Scikit-learn</span>
+            <span class="tag">Django</span><span class="tag">NumPy</span><span class="tag">SQLite</span><span class="tag">Git</span>
+          </div>
+        </div>
+
+        <div class="cv-proj-item">
+          <div class="cv-proj-name">Customer Segmentation Analysis</div>
+          <div class="cv-proj-date">Self-Directed · 2024</div>
+          <ul class="cv-bullets">
+            <li>Queried 500+ customers using SQL — computed RFM scores grouped into four tiers via percentile logic.</li>
+            <li>Cleaned data: resolved missing values, duplicates, and format issues.</li>
+            <li>Visualized segment distribution in Power BI with targeted insight summaries.</li>
+          </ul>
+          <div class="project-tags" style="margin-top:.5rem">
+            <span class="tag">SQL</span><span class="tag">Excel</span><span class="tag">Power BI</span>
+          </div>
+        </div>
+
+        <div class="cv-proj-item">
+          <div class="cv-proj-name">KPI &amp; Reporting Automation</div>
+          <div class="cv-proj-date">Self-Directed · 2024–Present</div>
+          <ul class="cv-bullets">
+            <li>Automated multi-source data consolidation using Excel Power Query, eliminating manual steps.</li>
+            <li>Built dynamic dashboards with pivot tables, KPI scorecards, slicers, and conditional formatting.</li>
+            <li>Conducted EDA on financial/operational datasets; delivered plain-language summaries with visuals.</li>
+          </ul>
+          <div class="project-tags" style="margin-top:.5rem">
+            <span class="tag">Excel</span><span class="tag">Power Query</span><span class="tag">Power BI</span>
+            <span class="tag">Python</span><span class="tag">SQL</span>
+          </div>
+        </div>
+
+        <div style="margin-top:.75rem;padding:.75rem;border:1px dashed #2a3a52;border-radius:8px">
+          <div style="font-family:'Space Mono',monospace;font-size:.68rem;color:#f59e0b;margin-bottom:.5rem">⟳ In Development</div>
+          <div style="display:flex;flex-direction:column;gap:.3rem">
+            <div style="font-size:.78rem;color:#64748b">◆ <strong style="color:#e2e8f0">Customer Churn Prediction</strong> — Binary classification + Power BI dashboard</div>
+            <div style="font-size:.78rem;color:#64748b">◆ <strong style="color:#e2e8f0">SQL Sales Analytics</strong> — 20+ queries with structured report</div>
+            <div style="font-size:.78rem;color:#64748b">◆ <strong style="color:#e2e8f0">Financial KPI Dashboard</strong> — Multi-page Power BI with DAX &amp; star schema</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-section">
+        <div class="cv-section-title">Education</div>
+        <div class="cv-edu-item">
+          <div class="cv-edu-degree">B.Sc. Computer Science</div>
+          <div class="cv-edu-school">Arab Open University · Cairo, Egypt</div>
+          <div class="cv-edu-date">Graduated 2025</div>
+          <div class="cv-edu-courses">Coursework: Data Structures &amp; Algorithms, Database Systems, Probability &amp; Statistics, Software Engineering, OOP</div>
+        </div>
+      </div>
+
+    </div><!-- end cv-main -->
+
+    <!-- SIDE COLUMN -->
+    <div class="cv-side">
+
+      <div class="cv-section">
+        <div class="cv-section-title">Technical Skills</div>
+        <div class="cv-skill-group">
+          <div class="cv-skill-label">Excel</div>
+          <div class="cv-skill-pills">
+            <span class="cv-pill">Power Query</span><span class="cv-pill">Pivot Tables</span>
+            <span class="cv-pill">VLOOKUP/XLOOKUP</span><span class="cv-pill">Dynamic Arrays</span>
+            <span class="cv-pill">Dashboards</span><span class="cv-pill">KPI Reporting</span>
+          </div>
+        </div>
+        <div class="cv-skill-group">
+          <div class="cv-skill-label">Power BI</div>
+          <div class="cv-skill-pills">
+            <span class="cv-pill">DAX</span><span class="cv-pill">Data Modeling</span>
+            <span class="cv-pill">Star Schema</span><span class="cv-pill">Drill-throughs</span>
+          </div>
+        </div>
+        <div class="cv-skill-group">
+          <div class="cv-skill-label">Python</div>
+          <div class="cv-skill-pills">
+            <span class="cv-pill">Pandas</span><span class="cv-pill">NumPy</span><span class="cv-pill">Matplotlib</span>
+            <span class="cv-pill">Seaborn</span><span class="cv-pill">Scikit-learn</span>
+          </div>
+        </div>
+        <div class="cv-skill-group">
+          <div class="cv-skill-label">SQL</div>
+          <div class="cv-skill-pills">
+            <span class="cv-pill">Joins</span><span class="cv-pill">CTEs</span>
+            <span class="cv-pill">Window Functions</span><span class="cv-pill">Subqueries</span><span class="cv-pill">RFM Scoring</span>
+          </div>
+        </div>
+        <div class="cv-skill-group">
+          <div class="cv-skill-label">Tools</div>
+          <div class="cv-skill-pills">
+            <span class="cv-pill">Git</span><span class="cv-pill">GitHub</span><span class="cv-pill">Django</span>
+            <span class="cv-pill">Jupyter</span><span class="cv-pill">VS Code</span><span class="cv-pill">Google Colab</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="cv-section">
+        <div class="cv-section-title">Certifications</div>
+        <div class="cv-cert-item">365 Data Science – Data Science &amp; Machine Learning Track <span class="wip-tag">In Progress</span></div>
+        <div class="cv-cert-item">Microsoft Excel – Advanced Data Analysis: Power Query, Pivot Tables, Dashboard Design</div>
+        <div class="cv-cert-item">Power BI – Data Modeling, DAX, Star Schema, Multi-Page Reports <span class="wip-tag">In Progress</span></div>
+        <div class="cv-cert-item">Python for Data Science – Applied ML, data cleaning, EDA via Jupyter Notebook</div>
+      </div>
+
+      <div class="cv-section">
+        <div class="cv-section-title">Languages</div>
+        <div class="cv-lang"><span>Arabic</span><span class="cv-lang-level">Native</span></div>
+        <div class="cv-lang"><span>English</span><span class="cv-lang-level">Professional</span></div>
+      </div>
+
+      <div class="cv-section">
+        <div class="cv-section-title">Contact</div>
+        <div style="display:flex;flex-direction:column;gap:.5rem;font-size:.78rem">
+          <a href="mailto:aamr7057@gmail.com" style="color:#00e5ff;text-decoration:none">📧 aamr7057@gmail.com</a>
+          <span style="color:#64748b">📞 01155362488</span>
+          <a href="https://github.com/Amr-Ahmed9" target="_blank" style="color:#00e5ff;text-decoration:none">🐙 github.com/Amr-Ahmed9</a>
+          <span style="color:#64748b">📍 Cairo, Egypt</span>
+        </div>
+      </div>
+
+    </div><!-- end cv-side -->
+  </div><!-- end cv-body -->
+
+</div><!-- end cv-page -->
+
+<script src="main.js"></script>
+</body>
+</html>
